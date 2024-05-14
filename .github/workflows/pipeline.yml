@@ -28,7 +28,7 @@ jobs:
     - name: Install pip application
       run: |
         pip3 install --upgrade pip setuptools wheel ez_setup pyqt5
-        pip3 install wapiti
+        pip3 install wapiti3
 
     - name: Run command
       run: |
