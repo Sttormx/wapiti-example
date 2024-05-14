@@ -19,13 +19,16 @@ jobs:
     - name: Install pip
       run: |
         sudo apt-get install python3-dev
+        sudo apt-get install libpcap-dev libpq-dev
+        sudo apt-get install qtbase5-dev
         python -m ensurepip --upgrade
         python -m pip install --upgrade pip
 
     - name: Install pip application
       run: |
+        pip3 install pyqt5
         pip3 install --upgrade pip setuptools wheel
-        pip install wapiti
+        pip3 install wapiti
 
     - name: Run command
       run: |
