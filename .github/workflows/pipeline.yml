@@ -18,11 +18,13 @@ jobs:
 
     - name: Install pip
       run: |
+        sudo apt-get install python3-dev
         python -m ensurepip --upgrade
         python -m pip install --upgrade pip
 
     - name: Install pip application
       run: |
+        pip3 install --upgrade pip setuptools wheel
         pip install wapiti
 
     - name: Run command
